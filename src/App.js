@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import {v4 as uuidv4} from 'uuid';
 import './App.css'
 import AddTask from './components/AddTask/AddTask';
 import Tasks from './components/Tasks/Tasks';
@@ -24,7 +25,7 @@ const handleTaskAddition = (taskTitle) => {
     ...tasks,
     {
       title: taskTitle,
-      id: Math.random(10),
+      id: uuidv4(),
       completed: false,
     },
   ]
